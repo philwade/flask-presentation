@@ -18,7 +18,7 @@ def teardown_request(exception):
 @app.route("/")
 def home():
     names = g.db.execute("select name from user")
-    return " ".join([n[0] for n in names])
+    return "<br>".join([n[0] for n in names])
 
 if __name__ == "__main__":
     app.run()
